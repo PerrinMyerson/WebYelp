@@ -1,0 +1,44 @@
+
+{
+  "name": "Webnotes",
+  "description": "",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsMa69h8bBWvhV5in8OsZuIQu98Djh83jTYHNnKFlhFdzDSPiW4dBrQahjVadldkSMir1lWLBECz7Q9pM6fzlCKSW9uFQkYw6NtKF0VkAVXTvET+ElhGWgn83mdL7tp0fi+qS/0XyHsjQpuEZL6KWw86vrE0WDjRMYKRsw85KNOWKQ9nOpewdZRRoCxnjkJbyxw8G1EDduIBZ7WYiDi8ZWFYIkxxXXswWqds9tS0TFsgEH0Nra6jrVc9Fbv49sgY431yyy5C7/KAOP91ZZm2Ow11JSCJA/Sj6TXRm3OunhL6Hw1tHxfvbvwSUHWYpjQis4J9iyfweyO4U4OtxXwAhpwIDAQAB",
+  "oauth2": {
+    "client_id": "470530735145-2lu92gbb6dqok8aahocu7ji86lusdh7t.apps.googleusercontent.com",
+    "scopes": ["profile email", "https://www.googleapis.com/auth/contacts",
+      "https://mail.google.com/","https://www.googleapis.com/auth/gmail.readonly", "https://www.googleapis.com/auth/userinfo.email", "https://www.googleapis.com/auth/userinfo.profile", "https://www.googleapis.com/auth/user.addresses.read"
+    ]
+  },
+  "icons": {
+    "16": "images/get_started16.png",
+    "32": "images/get_started32.png",
+    "48": "images/get_started48.png",
+    "128": "images/get_started128.png"
+  },
+  "background": {
+    "scripts": [
+      "./background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"], 
+      "js": ["content.js"],
+      "css" : ["modaldialog.css"]
+    }
+],
+   "browser_action": {
+    "default_icon": "images/get_started16.png"
+   },
+  "content_security_policy": "script-src 'self' https://apis.google.com/; object-src 'self'",
+
+    "web_accessible_resources":  ["modaldialog.html", "modaldialog.css"],
+    
+  "permissions": [
+    "identity",
+    "identity.email",
+    "https://api.com/"
+   ]
+}
