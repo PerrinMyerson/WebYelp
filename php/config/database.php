@@ -3,10 +3,10 @@
         //private $host = "127.0.0.1";
         private $host = "64.20.45.198";
         //private $database_name = "webnotes";
-        private $database_name = "nealmyer_webnotes";
+        private $database_name = "perrmyer_webnotes";
         //private $username = "root";
         //private $password = "root";
-        private $username = "nealmyer_webnotes";
+        private $username = "perrmyer_webnotes";
         private $password = "EinsteinApple";
         //private $port = 8889;
         private $port = 3306;
